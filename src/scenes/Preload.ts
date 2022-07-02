@@ -1,4 +1,3 @@
-
 // You can write more code here
 
 /* START OF COMPILED CODE */
@@ -10,47 +9,46 @@ import assetPackUrl from "../../static/assets/asset-pack.json";
 /* END-USER-IMPORTS */
 
 export default class Preload extends Phaser.Scene {
+  constructor() {
+    super("Preload");
 
-	constructor() {
-		super("Preload");
+    /* START-USER-CTR-CODE */
+    // Write your code here.
+    /* END-USER-CTR-CODE */
+  }
 
-		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
-	}
+  editorCreate(): void {
+    // guapen
+    const guapen = this.add.image(400, 219, "guapen");
+    guapen.scaleX = 0.5915891440784282;
+    guapen.scaleY = 0.5915891440784282;
 
-	editorCreate(): void {
+    // progress
+    const progress = this.add.text(400, 349, "", {});
+    progress.text = "0%";
+    progress.setStyle({ fontSize: "30px" });
 
-		// guapen
-		const guapen = this.add.image(400, 219, "guapen");
-		guapen.scaleX = 0.5915891440784282;
-		guapen.scaleY = 0.5915891440784282;
+    // progress (components)
+    new PreloadText(progress);
 
-		// progress
-		const progress = this.add.text(400, 349, "", {});
-		progress.text = "0%";
-		progress.setStyle({ "fontSize": "30px" });
+    this.events.emit("scene-awake");
+  }
 
-		// progress (components)
-		new PreloadText(progress);
+  /* START-USER-CODE */
 
-		this.events.emit("scene-awake");
-	}
+  // Write your code here
 
-	/* START-USER-CODE */
+  preload() {
+    this.editorCreate();
 
-	// Write your code here
+    this.load.pack("asset-pack", assetPackUrl);
 
-	preload() {
+    this.load.on(Phaser.Loader.Events.COMPLETE, () =>
+      this.scene.start("Level")
+    );
+  }
 
-		this.editorCreate();
-
-		this.load.pack("asset-pack", assetPackUrl);
-
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level"));
-	}
-
-	/* END-USER-CODE */
+  /* END-USER-CODE */
 }
 
 /* END OF COMPILED CODE */

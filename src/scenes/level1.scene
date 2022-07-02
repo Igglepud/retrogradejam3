@@ -1,0 +1,37 @@
+{
+    "id": "f409d0e0-ba5b-45dd-9fe1-abee3cef6dcd",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "level1",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1600,
+        "borderHeight": 900
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "d5182ea8-e5ec-4a0c-8888-1fdc3a9afa90",
+            "label": "rockets_WhiteRed___5",
+            "components": [],
+            "texture": {
+                "key": "Rockets-WhiteRed - 5"
+            },
+            "x": 156,
+            "y": 450,
+            "scaleX": 0.1,
+            "scaleY": 0.1,
+            "angle": 90
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

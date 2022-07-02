@@ -13,9 +13,26 @@
     },
     "displayList": [
         {
-            "type": "Image",
+            "type": "TileSprite",
+            "id": "d8161419-9626-47b2-8f78-78c7fc8d13a9",
+            "label": "sky",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "jungle-sky"
+            },
+            "x": 791,
+            "y": 479,
+            "scaleX": 0.4,
+            "scaleY": 0.4,
+            "width": 4093,
+            "height": 2389
+        },
+        {
+            "type": "Sprite",
             "id": "d5182ea8-e5ec-4a0c-8888-1fdc3a9afa90",
-            "label": "rockets_WhiteRed___5",
+            "label": "playerRocket",
+            "scope": "CLASS",
             "components": [],
             "texture": {
                 "key": "Rockets-WhiteRed - 5"
@@ -25,6 +42,20 @@
             "scaleX": 0.1,
             "scaleY": 0.1,
             "angle": 90
+        },
+        {
+            "type": "Image",
+            "id": "f8c9b11c-4469-4fb6-b46c-c85f20f17a66",
+            "label": "rockets_Blue___29",
+            "components": [],
+            "texture": {
+                "key": "Rockets-Blue - 29"
+            },
+            "x": 1360,
+            "y": 178,
+            "scaleX": 0.05,
+            "scaleY": 0.05,
+            "flipX": true
         }
     ],
     "plainObjects": [],

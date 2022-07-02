@@ -24,6 +24,13 @@ window.addEventListener("load", function () {
     width: 1600,
     height: 900,
     backgroundColor: "#2f2f2f",
+    physics: {
+      default: "arcade",
+      arcade: {
+        gravity: { y: 1000 },
+        //debug: true,
+      },
+    },
     scale: {
       mode: Phaser.Scale.ScaleModes.FIT,
       autoCenter: Phaser.Scale.Center.CENTER_BOTH,

@@ -8,30 +8,32 @@ import PushOnClick from "../components/PushOnClick";
 /* END-USER-IMPORTS */
 
 export default class Level extends Phaser.Scene {
-  constructor() {
-    super("Level");
 
-    /* START-USER-CTR-CODE */
+	constructor() {
+		super("Level");
+
+		/* START-USER-CTR-CODE */
     // Write your code here.
     /* END-USER-CTR-CODE */
-  }
+	}
 
-  editorCreate(): void {
-    // fufuSuperDino
-    const fufuSuperDino = this.add.image(400, 235, "FufuSuperDino");
+	editorCreate(): void {
 
-    // text
-    const text = this.add.text(400, 436, "", {});
-    text.text = "Phaser 3 + Phaser Editor 2D\nWebpack + TypeScript";
-    text.setStyle({ align: "center", fontFamily: "Arial", fontSize: "3em" });
+		// fufuSuperDino
+		const fufuSuperDino = this.add.image(400, 235, "FufuSuperDino");
 
-    // fufuSuperDino (components)
-    new PushOnClick(fufuSuperDino);
+		// text
+		const text = this.add.text(400, 436, "", {});
+		text.text = "Phaser 3 + Phaser Editor 2D\nWebpack + TypeScript";
+		text.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "3em" });
 
-    this.events.emit("scene-awake");
-  }
+		// fufuSuperDino (components)
+		new PushOnClick(fufuSuperDino);
 
-  /* START-USER-CODE */
+		this.events.emit("scene-awake");
+	}
+
+	/* START-USER-CODE */
 
   // Write your code here
 

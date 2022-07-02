@@ -2,9 +2,24 @@
     "section1": {
         "files": [
             {
+                "url": "assets/images/projectiles/en_finger_B.png",
+                "type": "image",
+                "key": "baseShot"
+            },
+            {
                 "url": "assets/FufuSuperDino.png",
                 "type": "image",
                 "key": "FufuSuperDino"
+            },
+            {
+                "url": "assets/images/space/jungle-sky.png",
+                "type": "image",
+                "key": "jungle-sky"
+            },
+            {
+                "url": "assets/images/space/Rockets-Blue - 29.png",
+                "type": "image",
+                "key": "Rockets-Blue - 29"
             },
             {
                 "url": "assets/images/space/Rockets-WhiteRed - 5.png",

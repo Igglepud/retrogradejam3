@@ -55,6 +55,8 @@ export default class level1 extends Phaser.Scene {
     }
     this.playerRocket.body.setAllowGravity(false);
     this.cursors = this.input.keyboard.createCursorKeys();
+    this.playerRocket.setScrollFactor(0);
+    this.sky.setScrollFactor(0);
   }
   update(time: number, delta: number): void {
     if (this.cursors?.up.isDown) {
@@ -72,16 +74,19 @@ export default class level1 extends Phaser.Scene {
       this.playerRocket.body.velocity.x = 0;
     }
     this.cameras.main.scrollX++;
-    this.playerRocket.setScrollFactor(0);
-    this.sky.setScrollFactor(0);
+
     this.sky.tilePositionX++;
     if (this.cursors) {
       if (Phaser.Input.Keyboard.JustDown(this.cursors?.space)) {
-        let shot = this.physics.add.sprite(
-          this.playerRocket.x + this.playerRocket.width / 2,
-          this.playerRocket.y,
-          "baseShot"
-        );
+        let shot = this.physics.add
+          .sprite(
+            this.playerRocket.x +
+              (this.playerRocket.width / 2) * this.playerRocket.scaleX +
+              this.cameras.main.scrollX,
+            this.playerRocket.y,
+            "baseShot"
+          )
+          .setOrigin(0, 0.5);
         shot.body.setVelocityX(400).setAllowGravity(false);
       }
     }
